@@ -9,15 +9,35 @@ class preference {
 	private $rfid;
 	private $set_id;
 
-	public function __construct($name, $min_value, $max_value, $rfid) {
+	public function __construct($name, $min_value, $max_value, $rfid,
+				    $pref_id = -1) {
 
-		$this->name = $name;
-		$this->rfid = $rfid;
-		$this->min_value = $min_value;
-		$this->max_value = $max_value;
+		if ($pref_id == -1) {
 
+			$this->name = $name;
+			$this->rfid = $rfid;
+			$this->min_value = $min_value;
+			$this->max_value = $max_value;
+			
+		}
+		else { 
+			$this->id = $pref_id;
+		
 		// sql code
 
+		}
+	}
+
+	public function addToDatabase() {
+
+		// sql code here
+
+	}
+
+	public function getFromDatabase() {
+
+		// sql code here, populate object based on pref_id		
+	
 	}
 
 	public function addToSet($set_id) {

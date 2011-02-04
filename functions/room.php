@@ -19,17 +19,27 @@ class room {
 	}
 
 	// add preference prototype to dummy set
-	public function addDummyPreference($preference) {
+	public function addDefaultPreference($preference) {
 
 	}
 
-	public function removeDummyPreference($pref_id) {
+	public function removeDefaultPreference($pref_id) {
 
 	}
 
 	public function modifyBasePreference($pref_id, $value) {
 
+		// 
+
 	}
+
+	public preferences[] function getPreferences() {
+
+		// sql code to return preferences matched by preference_set
+
+	}
+
+	public preferences[] function getDummyPreferences()
 
 }
 ?>

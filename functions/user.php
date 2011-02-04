@@ -28,7 +28,7 @@ class user {
 
 	}
 
-	public preferences[] function getPreferences() {
+	public preferences[] function getPreferenceSet() {
 
 		// get preferences (is_user) associated with his RFID. 
 
