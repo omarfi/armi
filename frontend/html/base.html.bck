@@ -2,7 +2,7 @@
 <title>ARMI Website</title>
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 </head>
-<div id ="full-container"> 
+
   <div id="content-container">
 <div id="head-container">
    <div id="header">
@@ -14,11 +14,10 @@
    </div>
 </div>
 </div>
- <div id="content-container">
+
 <div id="top-container">
   <div id="mainPhoto">
   </div>
-     </div>
   <div id="content-container">
   <div id="navigation-container">
    <div id="navigation">
@@ -103,6 +102,5 @@ who I love with all my heart, my mother."[14]"
 	</p>
 	</div>
    </div>
-</div>
 </div>
  </html>
