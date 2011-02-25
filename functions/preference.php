@@ -8,11 +8,11 @@ class preference {
 	private $max_value;
 	private $current_value;
 	private $rfid;
-	private $set_id;
+	public $set_id;
 
     
 	public function __construct($name, $min_value, $max_value, $rfid, 
-	                   $set_id = -1, $pref_id = -1) {
+	                   $pref_id = -1, $set_id = -1) {
 
 		if ($pref_id == -1) {
 
@@ -29,16 +29,45 @@ class preference {
         // if pref_id is provoded pull information from database
         // and ignore first 4 paramethers.
         $this->pullPreference ($pref_id, "preferences");
+        if($set_id != -1)
         $this->pullPreference ($pref_id, "modified_pref", $set_id);
         
 		}
 	}
+	
+	public function getFieldsList ($type)
+	{
+      // type 0 means preferences table
+      // type 1 means modified_pref table_name
+      
+      if ($type == 0)
+        return " pref_name, min_value, max_value, rfid, pref_id ";
+      
+      return " pref_id, owner_rfid, current_value, set_id ";
+      
+    }
+    
+    private function getValuesList ($type)
+    {
+      if ($type == 0)
+        return   "\"". $this->name ."\", "
+                ."\"". $this->min_value ."\", "
+                ."\"". $this->max_value ."\", "
+                ."\"". $this->rfid ."\", "
+                ."\"". $this->id ."\" ";
+     
+     return      "\"". $this->id ."\", "
+                ."\"". $this->rfid ."\", "
+                ."\"". $this->current_value ."\", "
+                ."\"". $this->set_id ."\" ";
+  
+    }
+	
 	/**
     *   Pull the information of a preference from the data base.
     *   @var $table_name The name of the table to get the data from. ("preferences" or "modified_pref"); 
     *   @author Mihail
     */
-
     public function pullPreference( $_pref_id, $table_name, $_set_id=0)
     {
       //echo $table_name. " ". $_pref_id. " \n";
@@ -48,9 +77,9 @@ class preference {
       
       $table = " ". $table_name ." ";
       if ($table_name == "preferences")
-        $fields = " pref_name, min_value, max_value, rfid, pref_id ";
+        $fields = $this->getFieldsList(0);
       else
-        $fields = " pref_id, owner_rfid, current_value, set_id ";
+        $fields = $this->getFieldsList(1);
       
         $clause = " pref_id=\"$_pref_id\" ";
       
@@ -94,61 +123,113 @@ class preference {
     
     /**
     * Outputs the data in the preference object to a string.
-    * Canbe used without invoking it .e.g. echo OBJECT_OF_TYPE_PREFERENCE;
+    * Can be used without invoking it .e.g. echo OBJECT_OF_TYPE_PREFERENCE;
     * @author Mihail 
     */
     public function __toString()
     {
-      return "Name: " . $this->name . "  ID: " . $this->id . " s CurrentValue: " 
+      return "Name: " . $this->name . "  ID: " . $this->id . " CurrentValue: " 
        . $this->current_value . " MinValue:" . $this->min_value
        . "  MaxValue:" . $this->max_value."  RFID: " . $this->rfid . "  SetID: " . $this->set_id;
     }
-    public function addToDatabase() {
+    
+    /**
+    *   Add this preference to database. Suppose there isn't one already.  
+    *   
+    */
+    public function addToDatabase($type) 
+    {
+      
+      $table = ($type==0 ? "preferences":"modified_pref");
+      
+      
+      $query = "INSERT INTO $table ";
+      if ($type == 0)
+        $query .= "( pref_name, min_value, max_value, rfid ) ";
+      else
+        $query .= "(  pref_id, owner_rfid, current_value, set_id )";
+      
+      $conn = connectToDatabase ();
+      
+      if ($type == 0)
+        $query .= sprintf ("VALUES ( '%s', '%s', '%s', '%s' )", 
+                          mysql_real_escape_string ($this->name), 
+                          $this->min_value,
+                          $this->max_value,
+                          $this->rfid );
 
-		// sql code here
-
+      else
+        $query .= sprintf ("VALUES ( '%s', '%s', '%s', '%s' )", 
+                          $this->id, 
+                          $this->rfid,
+                          $this->current_value,
+                          $this->set_id );
+        
+      //echo mysql_real_escape_string ($this->name);
+      //echo $query;
+      
+      mysql_query ($query) or die("Noooo!");
+      
+      if ($type == 0)
+        $pref_id = mysql_insert_id($conn);
+      
+      
+      disconnectFromDatabase($conn);
 	}
     
     /**
-    *   User frendly get that expects to have some date in beforehand.
+    *   User frendly get that expects to have some data in beforehand.
     *      
     *
     *  @var $type - 0 - gets a general preference based on $pref_id 
     *               1 - gets a modified preference based on $pref_id and set_id
     *  @author Mihail 
     */
-	public function getFromDatabase($type) {
+	public function getFromDatabase($type) 
+	{
       if ($type == 0)
         pullPreference( $this->pref_id, "preferences");
       else
         pullPreference( $this->pref_id, "modified_pref", $this->set_id);
 	}
 
-	public function addToSet($set_id) {
+	public function addToSet($set_id) 
+	{
 
-		$this->set_id = $set_id;
-
-		// sql code here
-
+	  $this->set_id = $set_id;
+      $this->addToDatabase(1);
+      
 	}	
 
-	public function removeFromSet() {
+	public function removeFromSet() 
+	{
+      
 
 		// sql code here
+		
+		
 		$set_id = null;
 
 	}
 
 	public function modifyCurrentValue($value) {
 
+      
 		$this->current_value = $value;
+        
         //sql code here
 	}
 
 }
 
   // Test ZONE!!!
-  //$pref = new preference("sasda", 1, 2, 3,8, 3);
-  //echo $pref . "\n";
+  $pref = new preference("sasda", 1, 2, 3,3, 8);
+  echo $pref . "\n";
+  $pref->addToSet (18);
+  echo $pref . "\n";
+  
   //
+  
+  //$pref = new preference("Sasdaasd", 1, 2, 3);
+  //$pref->addToDatabase(0);
 ?>
