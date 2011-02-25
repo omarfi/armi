@@ -20,7 +20,8 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-padding-left:400;
+height:35px;
+padding-left:400px;
 top:45px;
 right: 0px;
 background:#000;
@@ -57,7 +58,6 @@ float: left;
 padding: 5px 10px;
 color: #fff;
 text-decoration: none;
-border-right: 1px solid #fff;
 width:128px;
 text-align:center;
 }

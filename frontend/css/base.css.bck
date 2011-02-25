@@ -20,6 +20,7 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
+height:35;
 padding-left:400px;
 top:45px;
 right: 0px;
@@ -28,7 +29,7 @@ background:#000;
 
 #navigation-container
 {
-width: 870px;
+width:900px;
 height: 30px;
 color: #000;
 background: #CD3700;
@@ -57,16 +58,16 @@ float: left;
 padding: 5px 10px;
 color: #fff;
 text-decoration: none;
-border-right: 1px solid #fff;
+width:128px;
+text-align:center;
 }
 
 #navigation li a:hover { background: #5E2612; }
 
 #top-container
 {
-right
 color: #000000;
-        background: #000;
+background: #000;
 }
 #mainPhoto
 {
@@ -77,64 +78,86 @@ margin: 0 auto;
 height: 200px;
 }
 
-
-
-
 #content-container
 {
 margin:0 auto;
 width: 900px;
 background:#000;
+height:auto;
 
 }
 
 #content-container2
 {
 float: left;
-width: auto;
-background:#0000;/*box of log in but around it */
+width: 900px;
+height:auto;
+/*box of log in but around it */
 color: #fff;
-margin-top:4px;
+margin-top:0.1%;
+height:auto;
+background: #CD3700;
 }
 
 #content
 {
 clear: left;
 float: right;
-width: 560px;
-padding: 20px;
-margin: 0 0 0 2px;
+width: 600px;
+padding:50 30 0 45px; /* top right bottom left*/
+margin: 0 0 0 0;
 background: #5E2612;
 color: #fff;
-
+text-align:auto;
 }
 
+#p {}
 #content h2 { margin: 0; }
 #aside
 {
 float: left;
-width: 268px;
-height:418px;
-padding: 0px 0;
+width: 230px;
+width:203px;
+padding: 0 20px 0 0 ;
 display: inline;
-        background: #CD3700; /*place for log in */
-text-align:center;
-
+background: #CD3700; /*place for log in */
+text-align:left;
 }
+#input {width: 105px;position:relative ; left:20px;bottom: 0px; }
 #aside h3
 {
 margin:0;
 color:#fff;
-text-align:left ;
+text-align:left;
 margin-top:30px;
 margin-left:30px;
+}
+#button
+{
+ width:75px ;
+ text-align:center ;
+ position: relative ;
+ left:110px;  
+}
+#text1
+{
+ text-align:left;
+ font-style:italic;
+ font-size:10px;
+ position: relative ;
+ bottom:40px;
+}
+#text
+{
+ font-size:13px;
+text-align:left;
 }
 
 #quicklink-container
 {
-margin-top:2px;
-margin-right:1px;
-width: 289px;
+margin-top:0.25%;
+margin-right:0.25%;
+width: 297px;
 float: left;
 background: #CD3700;
 color: #fff;
