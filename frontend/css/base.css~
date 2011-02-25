@@ -58,6 +58,8 @@ padding: 5px 10px;
 color: #fff;
 text-decoration: none;
 border-right: 1px solid #fff;
+width:128px;
+text-align:center;
 }
 
 #navigation li a:hover { background: #5E2612; }
@@ -121,10 +123,10 @@ width:203px;
 padding: 0 20px 0 0 ;
 display: inline;
 background: #CD3700; /*place for log in */
-text-align:center;
+text-align:left;
 
 }
-#input {width: 120px;position:relative ; left:30px;}
+#input {width: 105px;position:relative ; left:20px;bottom: 0px; }
 #aside h3
 {
 margin:0;
@@ -138,7 +140,9 @@ margin-left:30px;
  width:85px ;
  text-align:center ;
  position: relative ;
- left:60px;
+ left:110px;
+ bottom:10px;
+  
 }
 #text1
 {
