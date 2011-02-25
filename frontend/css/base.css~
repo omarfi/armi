@@ -20,11 +20,7 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-<<<<<<< HEAD:frontend/css/base.css~
-padding-left:400px;
-=======
 padding-left:400;
->>>>>>> c0e4ff396c8eb200c9c275afd42e80d4b944e771:frontend/css/base.css~
 top:45px;
 right: 0px;
 background:#000;
@@ -32,11 +28,7 @@ background:#000;
 
 #navigation-container
 {
-<<<<<<< HEAD:frontend/css/base.css~
-width: 870px;
-=======
 width:900px;
->>>>>>> c0e4ff396c8eb200c9c275afd42e80d4b944e771:frontend/css/base.css~
 height: 30px;
 color: #000;
 background: #CD3700;
@@ -99,32 +91,17 @@ background:#000;
 #content-container2
 {
 float: left;
-<<<<<<< HEAD:frontend/css/base.css~
-width: auto;
-background:#0000;/*box of log in but around it */
-color: #fff;
-margin-top:4px;
-=======
 width: 900px;
 height: 500px;
 background:#0000;/*box of log in but around it */
 color: #fff;
 margin-top:0.1%;
->>>>>>> c0e4ff396c8eb200c9c275afd42e80d4b944e771:frontend/css/base.css~
 }
 
 #content
 {
 clear: left;
 float: right;
-<<<<<<< HEAD:frontend/css/base.css~
-width: 560px;
-padding: 20px;
-margin: 0 0 0 2px;
-background: #5E2612;
-color: #fff;
-
-=======
 width: 600px;
 padding:50 30 0 45px; /* top right bottom left*/
 margin: 0 0 0 0;
@@ -132,23 +109,12 @@ background: #5E2612;
 color: #fff;
 height: 450px;
 text-align:auto;
->>>>>>> c0e4ff396c8eb200c9c275afd42e80d4b944e771:frontend/css/base.css~
 }
 
 #content h2 { margin: 0; }
 #aside
 {
 float: left;
-<<<<<<< HEAD:frontend/css/base.css~
-width: 268px;
-height:418px;
-padding: 0px 0;
-display: inline;
-        background: #CD3700; /*place for log in */
-text-align:center;
-
-}
-=======
 width: 230px;
 height: 500px;
 width:203px;
@@ -158,30 +124,21 @@ background: #CD3700; /*place for log in */
 text-align:center;
 
 }
-#input {width: 120px;position:relative ; left:20px;}
->>>>>>> c0e4ff396c8eb200c9c275afd42e80d4b944e771:frontend/css/base.css~
+#input {width: 120px;position:relative ; left:30px;}
 #aside h3
 {
 margin:0;
 color:#fff;
-text-align:left ;
+text-align:left;
 margin-top:30px;
 margin-left:30px;
 }
-<<<<<<< HEAD:frontend/css/base.css~
-
-#quicklink-container
-{
-margin-top:2px;
-margin-right:1px;
-width: 289px;
-=======
 #button
 {
  width:85px ;
- text-align: center ;
-  position: relative ;
-  left:100px;
+ text-align:center ;
+ position: relative ;
+ left:60px;
 }
 #text1
 {
@@ -202,7 +159,6 @@ text-align:left;
 margin-top:0.25%;
 margin-right:0.25%;
 width: 297px;
->>>>>>> c0e4ff396c8eb200c9c275afd42e80d4b944e771:frontend/css/base.css~
 float: left;
 background: #CD3700;
 color: #fff;
