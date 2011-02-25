@@ -66,9 +66,8 @@ text-align:center;
 
 #top-container
 {
-right
 color: #000000;
-        background: #000;
+background: #000;
 }
 #mainPhoto
 {
@@ -94,10 +93,11 @@ background:#000;
 {
 float: left;
 width: 900px;
-height: 500px;
+height:auto;
 background:#0000;/*box of log in but around it */
 color: #fff;
 margin-top:0.1%;
+height:auto;
 }
 
 #content
@@ -109,22 +109,23 @@ padding:50 30 0 45px; /* top right bottom left*/
 margin: 0 0 0 0;
 background: #5E2612;
 color: #fff;
-height: 450px;
+height: auto;
 text-align:auto;
 }
+
+#p {}
 
 #content h2 { margin: 0; }
 #aside
 {
 float: left;
 width: 230px;
-height: 500px;
+height:auto;
 width:203px;
 padding: 0 20px 0 0 ;
 display: inline;
 background: #CD3700; /*place for log in */
 text-align:left;
-
 }
 #input {width: 105px;position:relative ; left:20px;bottom: 0px; }
 #aside h3
