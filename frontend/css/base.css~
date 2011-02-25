@@ -3,11 +3,11 @@
 width:100%;
 background:#000;
 }
+
 #head-container
 {
 color:#000;
 background: #000;
-
 }
 
 #header
@@ -104,7 +104,7 @@ background: #CD3700;
 {
 clear: left;
 float: right;
-width: 600px;
+width: 599px;
 padding:50 30 0 45px; /* top right bottom left*/
 margin: 0 0 0 0;
 background: #5E2612;
@@ -118,12 +118,12 @@ text-align:auto;
 #aside
 {
 float: left;
-width: 230px;
 width:203px;
 padding: 0 20px 0 0 ;
 display: inline;
 background: #CD3700; /*place for log in */
 text-align:left;
+overflow: hidden;
 }
 #input {width: 105px;position:relative ; left:20px;bottom: 0px; }
 #aside h3

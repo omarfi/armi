@@ -3,11 +3,11 @@
 width:100%;
 background:#000;
 }
+
 #head-container
 {
 color:#000;
 background: #000;
-
 }
 
 #header
@@ -20,12 +20,10 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-height:35px;
-padding-left:400px;
+padding-left:400;
 top:45px;
 right: 0px;
-margin-top:-40px;
-padding-bottom: 20px;
+background:#000;
 }
 
 #navigation-container
@@ -59,6 +57,7 @@ float: left;
 padding: 5px 10px;
 color: #fff;
 text-decoration: none;
+border-right: 1px solid #fff;
 width:128px;
 text-align:center;
 }
@@ -119,12 +118,12 @@ text-align:auto;
 #aside
 {
 float: left;
-width: 230px;
 width:203px;
 padding: 0 20px 0 0 ;
 display: inline;
 background: #CD3700; /*place for log in */
 text-align:left;
+overflow: hidden;
 }
 #input {width: 105px;position:relative ; left:20px;bottom: 0px; }
 #aside h3
