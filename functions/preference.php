@@ -8,7 +8,7 @@ class preference {
 	private $max_value;
 	private $current_value;
 	private $rfid;
-	public $set_id;
+	public  $set_id;
 
     
 	public function __construct($name, $min_value, $max_value, $rfid, 
@@ -65,25 +65,24 @@ class preference {
 	
 	/**
     *   Pull the information of a preference from the data base.
-    *   @var $table_name The name of the table to get the data from. ("preferences" or "modified_pref"); 
+    *   @var $type 0 = from "preferences", 1 = "modified_pref"; 
     *   @author Mihail
     */
-    public function pullPreference( $_pref_id, $table_name, $_set_id=0)
+    public function pullPreference( $_pref_id, $type, $_set_id=0)
     {
       //echo $table_name. " ". $_pref_id. " \n";
       $this->id = $_pref_id;
       
+      $table_name = $type == 0 ? "preferences":"modified_pref";
       //construct the right query
       
       $table = " ". $table_name ." ";
-      if ($table_name == "preferences")
-        $fields = $this->getFieldsList(0);
-      else
-        $fields = $this->getFieldsList(1);
       
-        $clause = " pref_id=\"$_pref_id\" ";
+      $fields = $this->getFieldsList($type);
       
-      if ($table_name != "preferences")
+      $clause = " pref_id=\"$_pref_id\" ";
+      
+      if ($type == 1)
         $clause .= " AND set_id=\"$_set_id\" ";
       
       $query="SELECT $fields FROM $table WHERE $clause";
@@ -97,7 +96,7 @@ class preference {
       //echo $row["pref_id"] . " " . $row["owner_rfid"]. " ". $row["set_id"];
       
       // fill the appropriate fields
-      if ($table_name == "preferences")
+      if ($type == 0)
       {
         $this->name = $row["pref_name"];
         $this->id = $row["pref_id"];
@@ -188,9 +187,9 @@ class preference {
 	public function getFromDatabase($type) 
 	{
       if ($type == 0)
-        pullPreference( $this->pref_id, "preferences");
+        pullPreference( $this->pref_id, 0);
       else
-        pullPreference( $this->pref_id, "modified_pref", $this->set_id);
+        pullPreference( $this->pref_id, 1, $this->set_id);
 	}
 
 	public function addToSet($set_id) 
@@ -203,19 +202,28 @@ class preference {
 
 	public function removeFromSet() 
 	{
+      // remove from database also !?!
       
-
-		// sql code here
-		
-		
-		$set_id = null;
+      $table = " modified_pref ";
+      $where = " set_id='" . $this->set_id . "', pref_id='" . $this->id . "' ";
+      
+      $conn = connectToDatabase ();
+      
+      $query = "DELETE FROM $table WHERE $where ";
+      
+     
+      echo $query . "\n";
+      mysql_query ($query);
+      
+      disconnectFromDatabase ($conn);
+	  $set_id = null;
 
 	}
 
-	public function modifyCurrentValue($value) {
-
+	public function modifyCurrentValue($value) 
+	{
       
-		$this->current_value = $value;
+      $this->current_value = $value;
         
         //sql code here
 	}
@@ -223,10 +231,13 @@ class preference {
 }
 
   // Test ZONE!!!
-  $pref = new preference("sasda", 1, 2, 3,3, 8);
+  $pref = new preference("sasda", 1, 2, 3, 3, 18);
   echo $pref . "\n";
-  $pref->addToSet (18);
-  echo $pref . "\n";
+  $pref->removeFromSet();
+  
+  
+  //$pref->addToSet (18);
+  //echo $pref . "\n";
   
   //
   
