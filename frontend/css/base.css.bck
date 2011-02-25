@@ -20,11 +20,11 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-height:35;
+height:35px;
 padding-left:400px;
 top:45px;
 right: 0px;
-background:#000;
+margin-top:-40px;
 }
 
 #navigation-container
