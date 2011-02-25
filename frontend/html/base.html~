@@ -66,7 +66,7 @@ align="right"  type="text" name="uname" /><br>
   <input id="button" type="submit" name="Log in" value="Log in" /></p>
 </form>
 
-<a href="#" id="text1">Lost password ?</a>
+<a href="#" id="text1">Lost password ?</a><br />
 <a href="#" id="text1">Not registed yet ?</a>
 </div>
 </div>
