@@ -97,6 +97,7 @@ color: #fff;
 margin-top:0.1%;
 height:auto;
 background: #CD3700;
+
 }
 
 #content
@@ -108,8 +109,8 @@ padding:50 30 0 45px; /* top right bottom left*/
 margin: 0 0 0 0;
 background: #5E2612;
 color: #fff;
+border-left: 3px solid black;
 text-align:auto;
-margin-right :10px;
 }
 
 #p {}
@@ -131,6 +132,7 @@ margin:0;
 color:#fff;
 text-align:left;
 margin-top:30px;
+margin-left:30px;
 }
 #button
 {
@@ -145,12 +147,18 @@ margin-top:30px;
  font-style:italic;
  font-size:10px;
  position: relative ;
+  width: 50px;
  bottom:40px;
 }
 #text
 {
  font-size:13px;
 text-align:left;
+}
+#text .label {
+  width: 80px;
+float: left;
+  overflow: hidden;
 }
 
 #quicklink-container
