@@ -20,16 +20,15 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-padding-left:400;
-top:45px;
-right: 0px;
+padding-left:450px;
 background:#000;
+height:35px;
 }
 
 #navigation-container
 {
 width:900px;
-height: 30px;
+height: 34px;
 color: #000;
 background: #CD3700;
 
@@ -57,7 +56,6 @@ float: left;
 padding: 5px 10px;
 color: #fff;
 text-decoration: none;
-border-right: 1px solid #fff;
 width:128px;
 text-align:center;
 }
