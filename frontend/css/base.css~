@@ -113,7 +113,6 @@ border-left: 3px solid black;
 text-align:auto;
 }
 
-#p {}
 #content h2 { margin: 0; }
 #aside
 {
@@ -123,7 +122,6 @@ padding: 0 20px 0 0 ;
 display: inline;
 background: #CD3700; /*place for log in */
 text-align:left;
-overflow: hidden;
 }
 #input {width: 105px;position:relative ; left:20px;bottom: 0px; }
 #aside h3
@@ -153,12 +151,14 @@ margin-left:30px;
 #text
 {
  font-size:13px;
-text-align:left;
+ text-align:left;
+
 }
-#text .label {
-  width: 80px;
+#text .label
+{
+width: 80px;
 float: left;
-  overflow: hidden;
+overflow: hidden;
 }
 
 #quicklink-container
