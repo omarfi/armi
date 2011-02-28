@@ -3,11 +3,11 @@
 width:100%;
 background:#000;
 }
+
 #head-container
 {
 color:#000;
 background: #000;
-
 }
 
 #header
@@ -20,11 +20,10 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-height:35px;
-padding-left:400px;
+padding-left:400;
 top:45px;
 right: 0px;
-margin-top:-40px;
+background:#000;
 }
 
 #navigation-container
@@ -58,6 +57,7 @@ float: left;
 padding: 5px 10px;
 color: #fff;
 text-decoration: none;
+border-right: 1px solid #fff;
 width:128px;
 text-align:center;
 }
@@ -97,26 +97,26 @@ color: #fff;
 margin-top:0.1%;
 height:auto;
 background: #CD3700;
+
 }
 
 #content
 {
 clear: left;
 float: right;
-width: 600px;
+width: 599px;
 padding:50 30 0 45px; /* top right bottom left*/
 margin: 0 0 0 0;
 background: #5E2612;
 color: #fff;
+border-left: 3px solid black;
 text-align:auto;
 }
 
-#p {}
 #content h2 { margin: 0; }
 #aside
 {
 float: left;
-width: 230px;
 width:203px;
 padding: 0 20px 0 0 ;
 display: inline;
@@ -145,12 +145,20 @@ margin-left:30px;
  font-style:italic;
  font-size:10px;
  position: relative ;
+  width: 50px;
  bottom:40px;
 }
 #text
 {
  font-size:13px;
-text-align:left;
+ text-align:left;
+
+}
+#text .label
+{
+width: 80px;
+float: left;
+overflow: hidden;
 }
 
 #quicklink-container
