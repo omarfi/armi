@@ -5,7 +5,7 @@ class room {
 	private $owner_rfid;
 	private $name;
 	private $description;
-	private $preference_set;
+	private $set;
 
 	public function __construct($id, $owner_rfid, $name, $description,
 				    $preference_set = null) {
@@ -18,28 +18,42 @@ class room {
 		// create dummy set for room in modified_pref
 	}
 
-	// add preference prototype to dummy set
 	public function addDefaultPreference($preference) {
+
+	  
 
 	}
 
 	public function removeDefaultPreference($pref_id) {
 
+	  
+
 	}
 
 	public function modifyBasePreference($pref_id, $value) {
 
-		// 
+		
 
 	}
 
-	public preferences[] function getPreferences() {
+	public function getPreferences() {
 
-		// sql code to return preferences matched by preference_set
+		
 
 	}
 
-	public preferences[] function getDummyPreferences()
+	public function getPreferenceSets() {
+
+  	  $connection = connectToDatabase();
+
+	  $preferences = mysql_query(
+			  "SELECT * FROM set_pref WHERE owner_id=$this->id");
+		
+	  disconnectFromDatabase(connection);
+
+	  return preferences;
+
+	}
 
 }
 ?>

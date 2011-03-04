@@ -1,5 +1,32 @@
 Project A.R.M.I.
 	-- Automated Room Management Interface
 
-Just a test.
+Database Structure:
 
+	 Preferences: storing generic preference types; we have no
+	 duplicated preferences in this table;
+		      
+         Modified Preferences: preferences that are set to some value
+         by the user; they have to live within a set of preferences;
+
+	 Preference Set: a collection of (modified / generic)
+	 preferences; these can belong either to a user or to a room; 
+
+	 Users, Rooms: self-explanatory; room_set points to a
+	 preference set which describes the preferences implementable
+	 in the given room;
+
+PHP Objects: (behaviour)
+
+	Room: modify implementable preferences (in the generic
+	preference set); list preferences mapped to that room
+	(room_set points to a preference set, which points to all
+	preferences in the set); get all sets mapped to a room;
+
+	User: can create a room; create a new preference set; get all
+	of previous;
+
+	Preference: create / modify preferences;
+
+	Preference Set: create / modify set; return all preferences in
+	a given set;

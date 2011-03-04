@@ -9,7 +9,9 @@ color:#000;
 background: #000;
 
 }
-
+#inputSearch {
+border-color:#00000;
+}
 #header
 {
 margin:0 auto;
@@ -26,6 +28,7 @@ top:45px;
 right: 0px;
 margin-top:-40px;
 padding-bottom: 20px;
+
 }
 
 #navigation-container
@@ -125,7 +128,13 @@ display: inline;
 background: #8a2a02; /*place for log in */
 text-align:left;
 }
-#input {width: 105px;position:relative ; left:20px;bottom: 0px; }
+#input {
+width: 105px;
+position:relative ;
+ left:20px;
+bottom: 0px; 
+border-color:#8a2a02;
+}
 #aside h3
 {
 margin:0;
@@ -149,6 +158,10 @@ margin-left:30px;
  position: relative ;
   width: 50px;
  bottom:40px;
+text-decoration:none;
+color:blue;
+margin-left:5px;
+
 }
 #text
 {
@@ -161,6 +174,7 @@ margin-left:30px;
 width: 80px;
 float: left;
 overflow: hidden;
+margin-left:5px;
 }
 
 #quicklink-container
