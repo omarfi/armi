@@ -3,11 +3,11 @@
 width:100%;
 background:#000;
 }
-
 #head-container
 {
 color:#000;
 background: #000;
+
 }
 
 #header
@@ -20,10 +20,12 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-padding-left:400;
+height:35px;
+padding-left:400px;
 top:45px;
 right: 0px;
-background:#000;
+margin-top:-40px;
+padding-bottom: 20px;
 }
 
 #navigation-container
@@ -57,7 +59,6 @@ float: left;
 padding: 5px 10px;
 color: #fff;
 text-decoration: none;
-border-right: 1px solid #fff;
 width:128px;
 text-align:center;
 }
@@ -77,6 +78,7 @@ margin: 0 auto;
 
 height: 200px;
 }
+
 
 #content-container
 {
@@ -163,9 +165,8 @@ overflow: hidden;
 
 #quicklink-container
 {
-margin-top:0.25%;
-margin-right:0.25%;
-width: 297px;
+margin-top:1px;
+width: 298px;
 float: left;
 background: #CD3700;
 color: #fff;
