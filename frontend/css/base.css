@@ -1,5 +1,6 @@
 #full-container
 {
+margin: none;
 width:100%;
 background:#000;
 font-family: Helvetica, Arial,sans-serif ;
@@ -201,4 +202,9 @@ width: 900px;
 text-align: center;
 padding: 20px;
 height: 10%;
+}
+
+body
+{
+  margin:0px;
 }
