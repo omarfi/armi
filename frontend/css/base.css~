@@ -3,11 +3,11 @@
 width:100%;
 background:#000;
 }
-
 #head-container
 {
 color:#000;
 background: #000;
+
 }
 
 #header
@@ -20,10 +20,12 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-padding-left:400;
+height:35px;
+padding-left:400px;
 top:45px;
 right: 0px;
-background:#000;
+margin-top:-40px;
+padding-bottom: 20px;
 }
 
 #navigation-container
@@ -57,7 +59,6 @@ float: left;
 padding: 5px 10px;
 color: #fff;
 text-decoration: none;
-border-right: 1px solid #fff;
 width:128px;
 text-align:center;
 }
@@ -78,6 +79,7 @@ margin: 0 auto;
 height: 200px;
 }
 
+
 #content-container
 {
 margin:0 auto;
@@ -96,7 +98,7 @@ height:auto;
 color: #fff;
 margin-top:0.1%;
 height:auto;
-background: #CD3700;
+background: #8a2a02;
 
 }
 
@@ -107,7 +109,7 @@ float: right;
 width: 599px;
 padding:50 30 0 45px; /* top right bottom left*/
 margin: 0 0 0 0;
-background: #5E2612;
+background: #4e1501;
 color: #fff;
 border-left: 3px solid black;
 text-align:auto;
@@ -120,7 +122,7 @@ float: left;
 width:203px;
 padding: 0 20px 0 0 ;
 display: inline;
-background: #CD3700; /*place for log in */
+background: #8a2a02; /*place for log in */
 text-align:left;
 }
 #input {width: 105px;position:relative ; left:20px;bottom: 0px; }

@@ -9,7 +9,7 @@
    </div>
    <div id="search-container">
 <input type="hidden" name="dff_view" value="grid">
-        Search:<input type="text" name="dff_keyword" size="30" maxlength="50">
+        <input type="text" name="dff_keyword" size="30" maxlength="50">
 <input type="submit" value="Search">
    </div>
 </div>
@@ -74,7 +74,7 @@
 	  <span class="label" > Username: </span>
 		    <input id="input" align="right" type="text" name="uname"/>
 	  <br>
-	  Password:
+	  <span class="label" > Password:</span>
 		<input align="right"  id="input" name="passw" type="text" />
 	  <br>
 	  <input id="button" type="submit" name="Log in" value="Log in" />
