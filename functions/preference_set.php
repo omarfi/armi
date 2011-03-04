@@ -43,24 +43,25 @@ class preference_set
       return $this->getPreferenceSet2 ($this->set_id);
     }
     
-	public function getPreferenceSet2($someSetID) 
+	public static function getPreferenceSet2($someSetID) 
 	{
       
       $prefs = array ();
       
-      $conn = connectToDatabase ();
+      $conn = connectToDatabase () or die ("getPreferenceSet failed!!");
       
-      $query = "SELECT * FROM modified_pref WHERE set_id='$someSetID'";
+      $query = "SELECT pref_id, set_id FROM modified_pref WHERE set_id='$someSetID'";
         
       $raw = mysql_query ($query);
-      
-      while ($row = mysql_fetch_row($raw))
+      disconnectFromDatabase ($conn);
+  
+      while ($row = mysql_fetch_array($raw))
       {
         $temp = new Preference (-1, -1, -1, -1, $row['pref_id'], $row['set_id']);
         $prefs[] = $temp;
       }
       
-      disconnectFromDatabase ($conn);
+      
       // return preferences mapped to set_id
       return $prefs;
 		
@@ -75,4 +76,20 @@ class preference_set
 	
 
 }
+
+// test ZONE!!! 
+echo "sdasdasd\n";
+
+$q = preference_set::getPreferenceSet2 (9);
+
+
+
+//echo "size -> " . sizeof ($q);
+//echo "\n";
+
+foreach ($q as $pref)
+{
+ echo $pref . "\n";
+}
+
 ?>
