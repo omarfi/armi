@@ -13,10 +13,10 @@ class preference {
     
 	public function __construct($name, $min_value, $max_value, $rfid, 
 	                   $pref_id = -1, $set_id = -1) {
-
+        
 		if ($pref_id == -1) {
-
-			$this->name = $name;
+   
+            $this->name = $name;
 			$this->rfid = $rfid;
 			$this->min_value = $min_value;
 			$this->max_value = $max_value;
@@ -26,7 +26,7 @@ class preference {
 			
 		}
 		else {
-        echo $set_id . "\n";
+        
         // if pref_id is provoded pull information from database
         // and ignore first 4 paramethers.
         $this->pullPreference ($pref_id, 0);
@@ -259,9 +259,9 @@ class preference {
 }
 
   // Test ZONE!!!
-  $pref = new preference("sasda", 1, 2, 3, 3, 8);
-  echo $pref . "\n";
-  echo $pref -> modifyCurrentValue (7) . "\n";
+  $pref = new preference("sasda", 1, 2, 3, 3, 29);
+  //echo $pref . "\n";
+  //echo $pref -> modifyCurrentValue (7) . "\n";
   //$pref->removeFromSet();
   
   
