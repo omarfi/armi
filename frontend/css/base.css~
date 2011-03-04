@@ -2,6 +2,7 @@
 {
 width:100%;
 background:#000;
+font-family: Helvetica, Arial,sans-serif ;
 }
 #head-container
 {
@@ -10,7 +11,7 @@ background: #000;
 
 }
 #inputSearch {
-border-color:#00000;
+border-color:#000;
 }
 #header
 {
@@ -22,22 +23,20 @@ background-image:url('../images/logo.jpg');
 }
 #search-container
 {
-height:35px;
-padding-left:400px;
+height:34px;
+padding-left:500px;
 top:45px;
-right: 0px;
 margin-top:-40px;
 padding-bottom: 20px;
-
 }
 
 #navigation-container
 {
-width:900px;
-height: 30px;
+height: 35px;
 color: #000;
 background: #CD3700;
-
+width:890px;
+padding-left: 6px;
 }
 
 #navigation
@@ -64,6 +63,8 @@ color: #fff;
 text-decoration: none;
 width:128px;
 text-align:center;
+
+
 }
 
 #navigation li a:hover { background: #5E2612; }
@@ -78,7 +79,6 @@ background: #000;
 padding-left:50;
 background-image:url('../images/mainPhoto_03.jpg');
 margin: 0 auto;
-
 height: 200px;
 }
 
@@ -99,9 +99,10 @@ width: 900px;
 height:auto;
 /*box of log in but around it */
 color: #fff;
-margin-top:0.1%;
+margin-top:3px;
 height:auto;
 background: #8a2a02;
+
 
 }
 
@@ -116,6 +117,7 @@ background: #4e1501;
 color: #fff;
 border-left: 3px solid black;
 text-align:auto;
+min-height:300px;
 }
 
 #content h2 { margin: 0; }
@@ -141,14 +143,14 @@ margin:0;
 color:#fff;
 text-align:left;
 margin-top:30px;
-margin-left:30px;
+margin-left:5px;
 }
 #button
 {
  width:75px ;
  text-align:center ;
  position: relative ;
- left:110px;  
+ left:105px;  
 }
 #text1
 {
@@ -161,13 +163,11 @@ margin-left:30px;
 text-decoration:none;
 color:blue;
 margin-left:5px;
-
 }
 #text
 {
  font-size:13px;
  text-align:left;
-
 }
 #text .label
 {
@@ -179,14 +179,13 @@ margin-left:5px;
 
 #quicklink-container
 {
-margin-top:2px;
+margin-top:3px;
 width: 300px;
 float: left;
 background: #a03104;
 color: #fff;
 text-align:center ;
 height:140px;
-
 }
 #footer-container
 {

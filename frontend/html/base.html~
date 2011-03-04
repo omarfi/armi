@@ -68,7 +68,7 @@
 	  </p>
 	</div>
 	<div id="aside" class="label">
-	<h3> <b>LOGIN</b> </h3>
+	<h3> <b>Login</b> </h3>
 	  <form action="the web site" method="post">
 	  <p id="text">
 	  <span class="label" > Username: </span>
@@ -80,13 +80,13 @@
 	  <input id="button" type="submit" name="Log in" value="Log in" />
 	  </p>
 	  </form>
-	  <a href="#" id="text1" class="label">
+	  <a href="#" id="text1" >
 	   
 	    Lost password ?
 	    
 	    <br>
 	  </a>
-	  <a href="#" id="text1" class="label">
+	  <a href="#" id="text1">
 	   
 	  Not registed yet ?  
 	  

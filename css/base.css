@@ -94,7 +94,7 @@
 	
 }
 
-#content h2 { margin: 0; }
+#content h2 {margin: 0;}
 #aside
 {
 	float: left;
@@ -118,8 +118,7 @@
 #quicklink-container
 {
 	margin-top:2px;
-	margin-right:1px;
-	width: 289px;
+	width: 300px;
 	float: left;
 	background: #CD3700;
 	color: #fff;
