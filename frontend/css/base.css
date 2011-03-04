@@ -165,8 +165,9 @@ overflow: hidden;
 
 #quicklink-container
 {
-margin-top:1px;
-width: 300px;
+margin-top:0.25%;
+margin-right:0.25%;
+width: 297px;
 float: left;
 background: #a03104;
 color: #fff;
