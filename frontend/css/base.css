@@ -198,6 +198,7 @@ background: #000;
 #footer
 {
 margin: 20;
+margin-bottom:0;
 width: 900px;
 text-align: center;
 padding: 20px;
