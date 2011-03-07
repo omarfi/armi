@@ -36,7 +36,7 @@ class preference {
 		}
 	}
 	
-	
+	// helps change all the values you like ... -1 if don't want to change
 	public function fillValues ($name, $min_value, $max_value, $rfid, 
                                           $pref_id, $set_id, $current_value)
     {
@@ -207,7 +207,8 @@ class preference {
       else
         pullPreference( $this->pref_id, 1, $this->set_id);
 	}
-
+    
+    // adds this preference to some new set
 	public function addToSet($set_id) 
 	{
 
@@ -215,7 +216,8 @@ class preference {
       $this->addToDatabase(1);
       
 	}	
-
+    
+    // removes it from the set and from the database respectively 
 	public function removeFromSet() 
 	{
       // remove from database also !?!
@@ -228,14 +230,15 @@ class preference {
       $query = "DELETE FROM $table WHERE $where ";
       
      
-      echo $query . "\n";
+      //echo $query . "\n";
       mysql_query ($query);
       
       disconnectFromDatabase ($conn);
 	  $set_id = null;
 
 	}
-
+      
+    // changes current value in database
 	public function modifyCurrentValue($value) 
 	{
       
@@ -259,7 +262,7 @@ class preference {
 }
 
   // Test ZONE!!!
-  $pref = new preference("sasda", 1, 2, 3, 3, 29);
+  //$pref = new preference("sasda", 1, 2, 3, 3, 29);
   //echo $pref . "\n";
   //echo $pref -> modifyCurrentValue (7) . "\n";
   //$pref->removeFromSet();
