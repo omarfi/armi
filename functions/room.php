@@ -1,4 +1,5 @@
 <?php
+include 'preference_set.php';
 class room {
 
 	private $id;
@@ -8,50 +9,63 @@ class room {
 	private $set;
 
 	public function __construct($id, $owner_rfid, $name, $description,
-				    $preference_set = null) {
+				    $set = null) {
 		
 		$this->id = $id;
 		$this->owner_rfid = $owner_rfid;
 		$this->name = $name;
 		$this->description = $description;
-		$this->preference_set = $preference_set;
-		// create dummy set for room in modified_pref
+		$this->set = $set;
+
 	}
 
 	public function addDefaultPreference($preference) {
 
-	  
+	  $preference->addToDatabase(0);
 
 	}
 
-	public function removeDefaultPreference($pref_id) {
+	// had pref_id before
+	public function removeDefaultPreference($preference) {
 
-	  
+	  $preference->removeFromSet();
 
 	}
 
-	public function modifyBasePreference($pref_id, $value) {
+	public function modifyBasePreference($preference, $value) {
 
-		
+	  $preference->modifyCurrentValue($value);
 
 	}
 
 	public function getPreferences() {
 
-		
+	  $connection = connectToDatabase();
+
+	  $preferences = preference_set::getPreferenceSet2($this->set);
+
+	  return $preferences;
 
 	}
 
+	// not yet functional
 	public function getPreferenceSets() {
 
   	  $connection = connectToDatabase();
 
-	  $preferences = mysql_query(
-			  "SELECT * FROM set_pref WHERE owner_id=$this->id");
-		
-	  disconnectFromDatabase(connection);
+	  $query = "SELECT * FROM set_pref WHERE owner_id=$this->id";
 
-	  return preferences;
+	  $preferences = mysql_query($query);
+		
+	  disconnectFromDatabase($connection);
+
+	  return $preferences;
+
+	}
+
+	public function __toString() {
+
+	  return " $id, $owner_id, $name, $description, $set ";
 
 	}
 

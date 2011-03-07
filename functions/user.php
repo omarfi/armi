@@ -12,27 +12,25 @@ class user {
 
 	public function __construct($firstName, $lastName, $password, 
 				    $email, $rfid) {
+
 		$this->firstName = firstName;
 		$this->lastName = lastName;
 		$this->password = password;
 		$this->email = email;
 		$this->rfid = rfid;
+
 	}
 
 	public function addRoom($id, $name, $description) {
 
-	  // refactor to create instance of Room
-      
 	  $connection = connectToDatabase();
-	  // room_id owner_rfid room_name room_description room_set
+	  
+	  $query = "INSERT INTO rooms 
+                      VALUES ($id, $this->rfid, $name, $description, 0)";
 
-	  // add a room with the given properties. 0 for room_set states
-	  // that the room is given a dummy preference set, which the user
-	  // can then modify
-	  mysql_query("INSERT INTO rooms 
-                      VALUES ($id, $this->rfid, $name, $description, 0)");
+	  mysql_query($query);
 
-	  disconnectFromDatabase(connection);
+	  disconnectFromDatabase($connection);
 
 	}
 
@@ -40,39 +38,59 @@ class user {
 
 	  $connection = connectToDatabase();
 
-	  $rooms = mysql_query(
-			       // might need ' ' around $this->rfid
-		    "SELECT * FROM rooms WHERE owner_rfid=$this->rfid");
+	  $query = "SELECT * FROM rooms WHERE owner_rfid=$this->rfid";
 
-	  disconnectFromDatabase(connection);
+	  $rooms = mysql_query($query);
+
+	  while ($row = mysql_fetch_array($rooms)) {
+
+	    // create instances of rooms
+
+	  }
+
+	  disconnectFromDatabase($connection);
 	  
-	  return rooms;
+	  return $rooms;
 
 	}
 
 	public function addPreferenceSet() {
 
-	   $connection = connectToDatabase();
+	  $connection = connectToDatabase();
 
-	  mysql_query("INSERT INTO set_pref
-                      VALUES (1, $this->rfid");
+	  $query = "INSERT INTO set_pref
+                      VALUES (1, $this->rfid";
 
-	  disconnectFromDatabase(connection);
+	  mysql_query($query);
+
+	  disconnectFromDatabase($connection);
 
 
 	}
 	
-	// previously called getPreferenceSet()
 	public function getPreferenceSet() {
 
 	  $connection = connectToDatabase();
 
-	  $preferences = mysql_query(
-			  "SELECT * FROM set_pref WHERE owner_id=$this->rfid");
-		
-	  disconnectFromDatabase(connection);
+	  $query = "SELECT * FROM set_pref WHERE owner_id=$this->rfid";
 
-	  return preferences;
+	  $preferences = mysql_query($query);
+
+	  while ($row = mysql_fetch_array($preferences)) {
+
+	    // create preference set objects
+
+	  }
+
+	  disconnectFromDatabase($connection);
+
+	  return $preferences;
+
+	}
+
+	public function __toString() {
+
+	  return " $firstName, $lastName, $password, $email, $rfid ";
 
 	}
 
