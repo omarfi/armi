@@ -1,5 +1,6 @@
 #full-container
 {
+margin: none;
 width:100%;
 background:#000;
 font-family: Helvetica, Arial,sans-serif ;
@@ -35,7 +36,7 @@ padding-bottom: 20px;
 height: 35px;
 color: #000;
 background: #CD3700;
-width:890px;
+width:894px;
 padding-left: 6px;
 }
 
@@ -197,8 +198,14 @@ background: #000;
 #footer
 {
 margin: 20;
+margin-bottom:0;
 width: 900px;
 text-align: center;
 padding: 20px;
 height: 10%;
+}
+
+body
+{
+  margin:0px;
 }
