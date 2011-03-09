@@ -11,6 +11,13 @@ color:#000;
 background: #000;
 
 }
+
+#searchButton
+{
+background-image:url('../images/search1.png') ;
+height:23px;
+width:80px;
+}
 #inputSearch {
 border-color:#000;
 }
@@ -175,8 +182,10 @@ height: 50px;
  width:75px ;
  text-align:center ;
  position: relative ;
- left:119px;
+ left:109px;
  top:2px;
+background-image:url('../images/button-orange-login.gif') ;
+height:23px;
 }
 .text1
 {
