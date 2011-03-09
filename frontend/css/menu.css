@@ -1,0 +1,28 @@
+/* menu css */
+#aside ul
+{
+
+margin-top: 30px;
+margin-bottom:30px;
+padding: 0;
+list-style-type:none;
+display: inline;
+}
+
+
+#aside li a
+{
+margin-top: 20px;
+margin-bottom:10px;
+display: block;
+float: center;
+padding: 0px 10px;
+color: #fff;
+text-decoration: none;
+width:200px;
+text-align:center;
+height: 50px;
+
+}
+/*---------------------*/
+

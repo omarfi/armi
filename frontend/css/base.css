@@ -64,8 +64,6 @@ color: #fff;
 text-decoration: none;
 width:128px;
 text-align:center;
-
-
 }
 
 #navigation li a:hover { background: #5E2612; }
@@ -133,24 +131,51 @@ text-align:left;
 .input {
 width: 105px;
 position:relative ;
- left:20px;
-bottom: 0px; 
+left:20px;
+/*bottom: 0px; */
 border-color:#8a2a02;
 }
 #aside h3
 {
 margin:0;
 color:#fff;
-text-align:left;
+text-align:center;
 margin-top:30px;
-margin-left:5px;
+margin-left:10px;
 }
+/* menu css */
+#aside ul
+{
+
+margin-top: 30px;
+margin-bottom:30px;
+padding: 0;
+list-style-type:none;
+display: inline;
+}
+
+
+#aside li a
+{
+margin-top: 20px;
+margin-bottom:10px;
+display: block;
+float: center;
+padding: 0px 10px;
+color: #fff;
+text-decoration: none;
+width:200px;
+text-align:center;
+height: 50px;
+
+}
+/*---------------------*/
 #button
 {
  width:75px ;
  text-align:center ;
  position: relative ;
- left:105px;
+ left:119px;
  top:2px;
 }
 .text1
@@ -169,10 +194,11 @@ margin-left:5px;
 {
  font-size:13px;
  text-align:left;
+ left: 3px ;
 }
 #text .label
 {
-width: 80px;
+width: 82px;
 float: left;
 overflow:hidden;
 margin-left:10px;
