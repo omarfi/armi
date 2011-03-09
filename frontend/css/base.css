@@ -1,6 +1,6 @@
 #full-container
 {
-margin: none;
+/*margin: none;*/
 width:100%;
 background:#000;
 font-family: Helvetica, Arial,sans-serif ;
@@ -77,14 +77,14 @@ background: #000;
 }
 #mainPhoto
 {
-padding-left:50;
+padding-left:50px;
 background-image:url('../images/mainPhoto_03.jpg');
 margin: 0 auto;
 height: 200px;
 }
 
 
-#content-container
+.content-container
 {
 margin:0 auto;
 width: 900px;
@@ -93,7 +93,7 @@ height:auto;
 
 }
 
-#content-container2
+.content-container2
 {
 float: left;
 width: 900px;
@@ -103,8 +103,6 @@ color: #fff;
 margin-top:3px;
 height:auto;
 background: #8a2a02;
-
-
 }
 
 #content
@@ -112,12 +110,13 @@ background: #8a2a02;
 clear: left;
 float: right;
 width: 599px;
-padding:50 30 0 45px; /* top right bottom left*/
+padding:50px 30px 0px 45px; /* top right bottom left*/
 margin: 0 0 0 0;
 background: #4e1501;
 color: #fff;
 border-left: 3px solid black;
-text-align:auto;
+/* Depends how everyone wants the text*/
+/*text-align:center;*/
 min-height:400px;
 }
 
@@ -131,7 +130,7 @@ display: inline;
 background: #8a2a02; /*place for log in */
 text-align:left;
 }
-#input {
+.input {
 width: 105px;
 position:relative ;
  left:20px;
@@ -151,9 +150,10 @@ margin-left:5px;
  width:75px ;
  text-align:center ;
  position: relative ;
- left:105px;  
+ left:105px;
+ top:2px;
 }
-#text1
+.text1
 {
  text-align:left;
  font-style:italic;
@@ -162,10 +162,10 @@ margin-left:5px;
   width: 50px;
  bottom:40px;
 text-decoration:none;
-color:blue;
+color: orange ;
 margin-left:5px;
 }
-#text
+.text
 {
  font-size:13px;
  text-align:left;
@@ -174,11 +174,11 @@ margin-left:5px;
 {
 width: 80px;
 float: left;
-overflow: hidden;
-margin-left:5px;
+overflow:hidden;
+margin-left:10px;
 }
 
-#quicklink-container
+.quicklink-container
 {
 margin-top:3px;
 width: 300px;
@@ -197,8 +197,8 @@ background: #000;
 
 #footer
 {
-margin: 20;
-margin-bottom:0;
+margin: 20px;
+/*margin-bottom:0;*/
 width: 900px;
 text-align: center;
 padding: 20px;

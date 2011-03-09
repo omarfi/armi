@@ -1,25 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
 <title>ARMI Website</title>
 <link rel="stylesheet" type="text/css" href="../css/base.css">
 </head>
+<body>
 <div id ="full-container">
-  <div id="content-container">
+  <div class="content-container">
 <div id="head-container">
    <div id="header">
    </div>
    <div id="search-container">
 <input type="hidden" name="dff_view" value="grid">
-<input type="text" id="inputSearch" name="dff_keyword" size="30" maxlength="50">
+<input type="text" id="inputSearch" name="dff_keyword" size="28" maxlength="50">
 <input type="submit" value="Search">
    </div>
 </div>
 </div>
- <div id="content-container">
+ <div class="content-container">
 <div id="top-container">
   <div id="mainPhoto">
   </div>
      </div>
-  <div id="content-container">
+  <div class="content-container">
   <div id="navigation-container">
    <div id="navigation">
    <ul>
@@ -33,8 +37,8 @@
    </div>
       </div>
    </div>
-   <div id="content-container">
-      <div id="content-container2">
+   <div class="content-container">
+      <div class="content-container2">
 	<div id="content">
 	  <h2>
 	  Page Heading
@@ -70,40 +74,40 @@
 	<div id="aside" class="label">
 	<h3> <b>Login</b> </h3>
 	  <form action="the web site" method="post">
-	  <p id="text">
-	  <span class="label" > Username: </span>
-		    <input id="input" align="right" type="text" name="uname"/>
+	  <p class="text">
+	  <span class="label" >Username: </span>
+	  <input class="input" align="right" type="text" name="uname">
 	  <br>
-	  <span class="label" > Password:</span>
-		<input align="right"  id="input" name="passw" type="text" />
+	  <span class="label" >Password: </span>
+	  <input align="right" class="input" name="passw" type="text" >
 	  <br>
-	  <input id="button" type="submit" name="Log in" value="Log in" />
+	  <input id="button" type="submit" name="Log in" value="Log in" >
 	  </p>
 	  </form>
-	  <a href="#" id="text1" >
+	  <a href="#" class="text1" >
 	   
 	    Lost password ?
 	    
 	    <br>
 	  </a>
-	  <a href="#" id="text1">
+	  <a href="#" class="text1">
 	   
 	  Not registed yet ?  
 	  
 	  </a>
 	</div>
       </div>
-      <div id="content-container">
-	<div id="quicklink-container">
-	  <h3>FIND A ROOM</h3>
+      <div class="content-container">
+	<div class="quicklink-container">
+	  <h3>Find a room</h3>
 	  <p>click here to find a room</p>
 	  </div>
-	  <div id="quicklink-container">
-	  <h3>BUY RFID DEVICE</h3>
+	  <div class="quicklink-container">
+	  <h3>Buy an RFID tag</h3>
 	  <p>click here to buy rfid devices</p>
 	  </div>
-	  <div id="quicklink-container">
-	  <h3>CONTACT US</h3>
+	  <div class="quicklink-container">
+	  <h3>Contact Us</h3>
 	  <p>click here to contact us</p>
 	</div>
     </div>
@@ -114,5 +118,7 @@
    </div>
 </div>
 </div>
+</div>
+</body>
  </html>
 
