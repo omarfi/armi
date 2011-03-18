@@ -1,0 +1,343 @@
+@charset "utf-8";
+/* CSS Document */
+#fullPage
+{
+	
+	width:100%;
+	height:100%;
+    background:#000;
+}
+
+/* ALL THE CONTAINERS ARE WRAPPED UP IN A BIG CONTAINER 
+------------------------------------------------------*/
+
+#fullContainer
+{
+	margin-right:auto;
+    margin-left:auto;
+	width:996px;
+	background-color:#000;
+}
+
+/*       HEADER-CONTAINER AND ITS SUB-CONTAINERS
+------------------------------------------------------*/
+#header
+{
+	float:left;
+	height:346px;
+	width:996px;
+	background-color:#000;
+}
+
+#topBanner
+{
+	clear:both;
+	float:left;
+	width:996px;
+	height:90px;
+	background-color:#000;
+}
+
+#logo
+{
+	margin-left:75px;
+	margin-top:10px;
+	padding-bottom:5px;
+	float:left;
+	background-image:url(images/images/logo.png);
+	width:318px;
+	height: 74px;
+}
+
+#mainPicture
+{
+	clear:both;
+	float:left;
+	margin-bottom:0px;
+	width:996px;
+	height:201px;
+	background-image:url(images/images/mainPicture.png);
+	
+}
+
+#menuBar
+{
+	clear:both;
+	float:left;
+	margin-left:0px;
+	margin-top:0px;
+	width:996px;
+	height:55px;
+	background-image:url(images/images/menuBar.png);
+}
+
+#menuBarArray
+{
+	float:left;
+	width:996px;
+	height:46px;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	
+}
+
+#homeButton /*Home Button*/
+{
+	float:left;
+	display:block;
+	width:166px;
+	height:46px;
+	background-image:url(images/images/Buttons/homeButton.png);
+	background-repeat:no-repeat;
+}
+
+#homeButton:hover {
+	background-image:url(images/images/Buttons/homeRedButton.png) }
+
+#aboutArmiButton /*About ARMI button*/
+{
+	float:left;
+	display:block;
+	width:166px;
+	height:46px;
+	background-image:url(images/images/Buttons/aboutArmiButton.png);
+	background-repeat:no-repeat;
+}
+
+#aboutArmiButton:hover {
+	background-image:url(images/images/Buttons/aboutArmiRedButton.png) }
+	
+#productsButton /*Products button*/
+{
+	float:left;
+	display:block;
+	width:166px;
+	height:46px;
+	background-image:url(images/images/Buttons/productsButton.png);
+	background-repeat:no-repeat;
+}
+
+#productsButton:hover {
+	background-image:url(images/images/Buttons/productsRedButton.png) }
+	
+#myAccountButton /*My Account Button*/
+{
+	float:left;
+	display:block;
+	width:166px;
+	height:46px;
+	background-image:url(images/images/Buttons/myAccountButton.png);
+	background-repeat:no-repeat;
+}
+
+#myAccountButton:hover {
+	background-image:url(images/images/Buttons/myAccountRedButton.png) }
+		
+#FAQButton /*FAQ button*/
+{
+	float:left;
+	display:block;
+	width:166px;
+	height:46px;
+	background-image:url(images/images/Buttons/FAQButton.png);
+	background-repeat:no-repeat;
+}
+
+#FAQButton:hover {
+	background-image:url(images/images/Buttons/FAQRedButton.png) }
+	
+#supportButton /*Support Button*/
+{
+	float:left;
+	display:block;
+	width:166px;
+	height:46px;
+	background-image:url(images/images/Buttons/supportButton.png);
+	background-repeat:no-repeat;
+}
+
+#supportButton:hover {
+	background-image:url(images/images/Buttons/supportRedButton.png) }
+	
+
+/*------------------------------------------------------*/
+
+
+
+
+/*       MIDDLE-CONTAINER AND ITS SUB-CONTAINERS
+------------------------------------------------------*/
+#middlePart
+{
+	width:996px;
+	height:423px;
+	padding-top:10px;
+	padding-bottom:10px;
+	clear:both;
+}
+
+#contentContainer
+{
+	color:#FFF;
+	height:423px;
+	width:713px;
+	float:right;
+	background-image:url(images/images/contentContainer.png);
+}
+
+#textInTheContainer
+{
+	color:#FFF;
+	height:423px;
+	width:650px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* Login Panel and User Menu*/
+#panelContainers
+{
+	height:423px;
+	width:274px;
+	float:left;
+}
+#loginPanel
+{
+	height:176px;
+	width:274px;
+	float:left;
+	background-image:url(images/images/loginPanel.png);
+}
+#userMenuArray
+{
+	height:231px;
+	width:274px;
+	float:right;
+	list-style-type:none;
+}
+
+#userMenuHead
+{
+	display:block;
+	height:44px;
+	width:274px;
+	background-image:url(images/images/manageAccountHead.png)
+}
+
+#userMenuItems
+{
+	display:block;
+	height:46px;
+	width:274px;
+	background-image:url(images/images/manageAccountButton.png)
+}
+
+#userMenuFooter
+{
+	display:block;
+	height:49px;
+	width:274px;
+	background-image:url(images/images/manageAccountFooter.png)
+}
+
+
+/*------------------------------------------------------*/
+
+
+
+
+
+/*       FOOTER-CONTAINER AND ITS SUB-CONTAINERS
+------------------------------------------------------*/
+#footer
+{
+	width:996px;
+	height:321px;
+	clear:both;
+}
+#quickJumps
+{
+	width:996px;
+	height:221px;
+	float:left;
+	background-image:url(images/images/footer.png);
+}
+
+#quickJumpsVerticalSpacer
+{
+	width:996px;
+	clear:both;
+	height:40px;
+}
+#quickJump1
+{
+	float:left;
+	height:221px;
+	width:332px;
+}
+#quickJump1Content
+{
+	margin-right:auto;
+    margin-left:auto;
+	height:150px;
+	width:210px;
+}
+#quickJumpIcon1
+{
+	float:left;
+	width:54px;
+	height:37px;
+	background-image:url(images/images/findARoomIcon.gif);
+}
+#quickJump2
+{
+	float:left;
+	height:221px;
+	width:332px;
+}
+#quickJump2Content
+{
+	margin-right:auto;
+    margin-left:auto;
+	height:150px;
+	width:210px;
+}
+#quickJumpIcon2
+{
+	float:left;
+	width:54px;
+	height:54px;
+	background-image:url(images/images/buyAChipIcon.gif);
+}
+#quickJump3
+{
+	float:left;
+	height:221px;
+	width:332px;
+}
+#quickJump3Content
+{
+	margin-right:auto;
+    margin-left:auto;
+	height:150px;
+	width:210px;
+}
+#quickJumpIcon3
+{
+	float:left;
+	width:54px;
+	height:53px;
+	background-image:url(images/images/contactUsIcon.gif);
+}
+#bottomBanner
+{
+	width:996px;
+	height:100px;
+	float:left;
+	color:#FFF;
+	padding-left:350px;
+	padding-top:30px;
+
+}
+/*------------------------------------------------------*/
