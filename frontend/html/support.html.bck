@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ARMI - Automated Room Management Interface </title>
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <div id ="fullPage">
 
@@ -45,7 +45,7 @@
     	<div id ="contentContainer">
         <div id ="textInTheContainer">
          <h2>
-	  About A.R.M.I
+	  Support
 	  </h2>
 	  <p>
       <br />
